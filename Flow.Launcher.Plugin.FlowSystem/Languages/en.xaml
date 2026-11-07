@@ -1,0 +1,18 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <system:String x:Key="flowlauncher_plugin_flowsystem_plugin_description">System information for Flow Launcher</system:String>
+
+    <system:String x:Key="flowlauncher_plugin_flowsystem_processor">Processor</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_graphics_card">Graphics card</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_installed_memory">Installed memory</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_system_architecture">System architecture</system:String>
+
+    <system:String x:Key="flowlauncher_plugin_flowsystem_cpu_unknown">CPU unknown</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_gpu_unknown">GPU unknown</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_gpu_query_failed">GPU query failed</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_ram_unknown">RAM unknown</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_ram_query_failed">RAM query failed</system:String>
+</ResourceDictionary>

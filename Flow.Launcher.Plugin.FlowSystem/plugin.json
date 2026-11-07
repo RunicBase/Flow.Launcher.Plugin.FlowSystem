@@ -1,0 +1,12 @@
+{
+    "ID": "44C3AA7C-CBD5-45CB-8462-1105D9889852",
+    "ActionKeyword": "sys",
+    "Name": "FlowSystem",
+    "Description": "System information for Flow Launcher",
+    "Author": "rxbn_kng",
+    "Version": "1.0.0",
+    "Language": "csharp",
+    "Website": "https://github.com/rxbn_kng/Flow.Launcher.Plugin.FlowSystem",
+    "IcoPath": "icon.png",
+    "ExecuteFileName": "Flow.Launcher.Plugin.FlowSystem.dll"
+}
