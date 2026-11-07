@@ -25,6 +25,7 @@ namespace Flow.Launcher.Plugin.FlowSystem
     internal sealed record MemoryInfo(
         ulong TotalBytes,
         IReadOnlyList<string> Types,
+        IReadOnlyList<uint> ConfiguredSpeeds,
         bool QueryFailed);
 
     internal sealed record StorageInfo(IReadOnlyList<DiskInfo> Disks, bool QueryFailed);

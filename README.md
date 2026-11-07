@@ -7,7 +7,7 @@ A plugin for the [Flow launcher](https://github.com/Flow-Launcher/Flow.Launcher)
 
 - CPU name, core count, and thread count
 - Graphics card names
-- Installed RAM capacity and memory type (such as DDR4 or DDR5)
+- Installed RAM capacity, memory type (such as DDR4 or DDR5), and configured speed in MT/s
 - Physical network adapters with Wi-Fi or Ethernet labels
 - SSDs and HDDs with connection type and capacity (excluding USB drives)
 - Windows version, build number, and system architecture
@@ -25,5 +25,4 @@ Other languages fall back to English.
 ## Planned
 
 - add support for more languages
-- show RAM speed
 - show device name

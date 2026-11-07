@@ -182,10 +182,11 @@ namespace Flow.Launcher.Plugin.FlowSystem
             try
             {
                 using var searcher = new ManagementObjectSearcher(
-                    "SELECT Capacity, SMBIOSMemoryType FROM Win32_PhysicalMemory");
+                    "SELECT Capacity, SMBIOSMemoryType, ConfiguredClockSpeed FROM Win32_PhysicalMemory");
                 using var modules = searcher.Get();
                 ulong totalBytes = 0;
                 var types = new SortedSet<string>();
+                var configuredSpeeds = new SortedSet<uint>();
 
                 foreach (ManagementObject module in modules)
                 {
@@ -194,6 +195,11 @@ namespace Flow.Launcher.Plugin.FlowSystem
                         if (module["Capacity"] is ulong capacity && capacity > 0)
                         {
                             totalBytes += capacity;
+                            if (module["ConfiguredClockSpeed"] is uint speed && speed > 0)
+                            {
+                                configuredSpeeds.Add(speed);
+                            }
+
                             if (module["SMBIOSMemoryType"] is uint memoryType)
                             {
                                 string type = GetRamType(memoryType);
@@ -206,15 +212,16 @@ namespace Flow.Launcher.Plugin.FlowSystem
                     }
                 }
 
-                return new MemoryInfo(totalBytes, new List<string>(types), false);
+                return new MemoryInfo(totalBytes, new List<string>(types),
+                    new List<uint>(configuredSpeeds), false);
             }
             catch (ManagementException)
             {
-                return new MemoryInfo(0, System.Array.Empty<string>(), true);
+                return new MemoryInfo(0, System.Array.Empty<string>(), System.Array.Empty<uint>(), true);
             }
             catch (System.UnauthorizedAccessException)
             {
-                return new MemoryInfo(0, System.Array.Empty<string>(), true);
+                return new MemoryInfo(0, System.Array.Empty<string>(), System.Array.Empty<uint>(), true);
             }
         }
 

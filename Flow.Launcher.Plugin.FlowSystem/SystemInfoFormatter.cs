@@ -71,9 +71,23 @@ namespace Flow.Launcher.Plugin.FlowSystem
 
             double totalGiB = memory.TotalBytes / (1024d * 1024 * 1024);
             string text = totalGiB.ToString("0.##", strings.Culture) + " GB";
-            return memory.Types.Count > 0
-                ? text + " " + string.Join("/", memory.Types)
-                : text;
+            if (memory.Types.Count > 0)
+            {
+                text += " " + string.Join("/", memory.Types);
+            }
+
+            if (memory.ConfiguredSpeeds.Count > 0)
+            {
+                var speeds = new List<string>();
+                foreach (uint speed in memory.ConfiguredSpeeds)
+                {
+                    speeds.Add(speed.ToString(strings.Culture));
+                }
+
+                text += " · " + string.Join("/", speeds) + " MT/s";
+            }
+
+            return text;
         }
 
         private static IReadOnlyList<NetworkAdapterText> FormatNetwork(NetworkInfo network, PluginStrings strings)
