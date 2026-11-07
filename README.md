@@ -17,3 +17,4 @@ Other languages fall back to English.
 
 - add support for more languages
 - show RAM speed
+- show device name
