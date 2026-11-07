@@ -6,15 +6,14 @@ namespace Flow.Launcher.Plugin.FlowSystem
     public class FlowSystem : IPlugin, IPluginI18n
     {
         private PluginStrings _strings;
-        private string _osArchitecture;
-        private string _cpuName;
-        private string _ramText;
-        private List<string> _gpuNames = new List<string>();
+        private SystemInfo _systemInfo;
+        private SystemInfoText _displayText;
 
         public void Init(PluginInitContext context)
         {
             _strings = new PluginStrings(context.API, CultureInfo.CurrentUICulture);
-            LoadSystemInfo();
+            _systemInfo = SystemInfoReader.Read();
+            UpdateLocalizedText();
         }
 
         public string GetTranslatedPluginTitle()
@@ -30,25 +29,23 @@ namespace Flow.Launcher.Plugin.FlowSystem
         public void OnCultureInfoChanged(CultureInfo newCulture)
         {
             _strings.Culture = newCulture;
-            LoadSystemInfo();
+            UpdateLocalizedText();
         }
 
-        private void LoadSystemInfo()
+        private void UpdateLocalizedText()
         {
-            _osArchitecture = SystemInfoReader.ReadOsArchitecture();
-            _cpuName = SystemInfoReader.ReadCpuName(_strings);
-            _gpuNames = SystemInfoReader.ReadGpuNames(_strings);
-            _ramText = SystemInfoReader.ReadRamText(_strings);
+            _displayText = SystemInfoFormatter.Format(_systemInfo, _strings);
         }
 
         public List<Result> Query(Query query)
         {
+            SystemInfoText text = _displayText;
             var results = new List<Result>
             {
                 new Result
                 {
-                    Title = _cpuName ?? _strings.CpuUnknown,
-                    SubTitle = _strings.Processor,
+                    Title = text.CpuName,
+                    SubTitle = text.CpuDescription,
                     Glyph = new GlyphInfo(
                         "/Resources/#Segoe Fluent Icons",
                         "\uE950"
@@ -56,12 +53,12 @@ namespace Flow.Launcher.Plugin.FlowSystem
                 }
             };
 
-            foreach (string gpuName in _gpuNames)
+            foreach (string gpuName in text.GpuNames)
             {
                 results.Add(new Result
                 {
                     Title = gpuName,
-                    SubTitle = _strings.GraphicsCard,
+                    SubTitle = text.GpuDescription,
                     Glyph = new GlyphInfo(
                         "/Resources/#Segoe Fluent Icons",
                         "\uE7F4"
@@ -71,18 +68,54 @@ namespace Flow.Launcher.Plugin.FlowSystem
 
             results.Add(new Result
             {
-                Title = _ramText ?? _strings.RamUnknown,
-                SubTitle = _strings.InstalledMemory,
+                Title = text.RamText,
+                SubTitle = text.RamDescription,
                 Glyph = new GlyphInfo(
                     "/Resources/#Segoe Fluent Icons",
                     "\uE964"
                 )
             });
 
+            foreach (NetworkAdapterText adapter in text.NetworkAdapters)
+            {
+                results.Add(new Result
+                {
+                    Title = adapter.Name,
+                    SubTitle = adapter.Description,
+                    Glyph = new GlyphInfo(
+                        "/Resources/#Segoe Fluent Icons",
+                        adapter.Glyph
+                    )
+                });
+            }
+
+            foreach (DiskText disk in text.Disks)
+            {
+                results.Add(new Result
+                {
+                    Title = disk.Name,
+                    SubTitle = disk.Description,
+                    Glyph = new GlyphInfo(
+                        "/Resources/#Segoe Fluent Icons",
+                        "\uEDA2"
+                    )
+                });
+            }
+
             results.Add(new Result
             {
-                Title = _osArchitecture,
-                SubTitle = _strings.SystemArchitecture,
+                Title = text.OsName,
+                SubTitle = text.OsDescription,
+                Glyph = new GlyphInfo(
+                    "/Resources/#Segoe Fluent Icons",
+                    "\uE977"
+                )
+            });
+
+            results.Add(new Result
+            {
+                Title = text.Architecture,
+                SubTitle = text.ArchitectureDescription,
                 Glyph = new GlyphInfo(
                     "/Resources/#Segoe Fluent Icons",
                     "\uE770"

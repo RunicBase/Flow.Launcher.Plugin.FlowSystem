@@ -16,9 +16,24 @@ namespace Flow.Launcher.Plugin.FlowSystem
 
         public string PluginDescription => GetString("plugin_description");
         public string Processor => GetString("processor");
+        public string Core => GetString("core");
+        public string Cores => GetString("cores");
+        public string Thread => GetString("thread");
+        public string Threads => GetString("threads");
         public string GraphicsCard => GetString("graphics_card");
         public string InstalledMemory => GetString("installed_memory");
+        public string NetworkAdapter => GetString("network_adapter");
+        public string WirelessLan => GetString("wireless_lan");
+        public string Ethernet => GetString("ethernet");
+        public string NetworkUnknown => GetString("network_unknown");
+        public string NetworkQueryFailed => GetString("network_query_failed");
+        public string StorageDevice => GetString("storage_device");
+        public string StorageQueryFailed => GetString("storage_query_failed");
+        public string OperatingSystem => GetString("operating_system");
+        public string Build => GetString("build");
         public string SystemArchitecture => GetString("system_architecture");
+        public string OsUnknown => GetString("os_unknown");
+        public string OsQueryFailed => GetString("os_query_failed");
         public string CpuUnknown => GetString("cpu_unknown");
         public string GpuUnknown => GetString("gpu_unknown");
         public string GpuQueryFailed => GetString("gpu_query_failed");

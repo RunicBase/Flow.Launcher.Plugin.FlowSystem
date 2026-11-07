@@ -6,11 +6,26 @@
     <system:String x:Key="flowlauncher_plugin_flowsystem_plugin_description">System information for Flow Launcher</system:String>
 
     <system:String x:Key="flowlauncher_plugin_flowsystem_processor">Processor</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_core">core</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_cores">cores</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_thread">thread</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_threads">threads</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_graphics_card">Graphics card</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_installed_memory">Installed memory</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_network_adapter">Network adapter</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_wireless_lan">Wi-Fi</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_ethernet">Ethernet</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_network_unknown">Network adapter unknown</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_network_query_failed">Network adapter query failed</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_storage_device">Storage device</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_storage_query_failed">Storage query failed</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_operating_system">Operating System</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_build">Build</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_system_architecture">System architecture</system:String>
 
     <system:String x:Key="flowlauncher_plugin_flowsystem_cpu_unknown">CPU unknown</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_os_unknown">Operating system unknown</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_os_query_failed">Operating system query failed</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_gpu_unknown">GPU unknown</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_gpu_query_failed">GPU query failed</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_ram_unknown">RAM unknown</system:String>

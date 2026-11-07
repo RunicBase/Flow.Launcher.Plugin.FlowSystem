@@ -6,11 +6,26 @@
     <system:String x:Key="flowlauncher_plugin_flowsystem_plugin_description">Systeminformationen für Flow Launcher</system:String>
 
     <system:String x:Key="flowlauncher_plugin_flowsystem_processor">Prozessor</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_core">Kern</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_cores">Kerne</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_thread">Thread</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_threads">Threads</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_graphics_card">Grafikkarte</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_installed_memory">Installierter Arbeitsspeicher</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_network_adapter">Netzwerkadapter</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_wireless_lan">WLAN</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_ethernet">Ethernet</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_network_unknown">Netzwerkadapter unbekannt</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_network_query_failed">Netzwerkadapter-Abfrage fehlgeschlagen</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_storage_device">Datenträger</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_storage_query_failed">Datenträger-Abfrage fehlgeschlagen</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_operating_system">Betriebssystem</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_build">Build</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_system_architecture">Systemarchitektur</system:String>
 
     <system:String x:Key="flowlauncher_plugin_flowsystem_cpu_unknown">CPU unbekannt</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_os_unknown">Betriebssystem unbekannt</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_os_query_failed">Betriebssystem-Abfrage fehlgeschlagen</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_gpu_unknown">GPU unbekannt</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_gpu_query_failed">GPU-Abfrage fehlgeschlagen</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_ram_unknown">RAM unbekannt</system:String>
