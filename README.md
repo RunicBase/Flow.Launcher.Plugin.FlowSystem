@@ -3,7 +3,7 @@ Flow.Launcher.Plugin.FlowSystem
 
 A plugin for the [Flow launcher](https://github.com/Flow-Launcher/Flow.Launcher).
 
-## Features
+## ✨️ Features
 
 - CPU name, core count, and thread count
 - Graphics card names
@@ -12,17 +12,17 @@ A plugin for the [Flow launcher](https://github.com/Flow-Launcher/Flow.Launcher)
 - SSDs and HDDs with connection type and capacity (excluding USB drives)
 - Windows version, build number, and system architecture
 
-## Usage
+## ⌨️ Usage
 
     sys
 
-## Languages
+## 🌍 Languages
 
 The plugin follows the language selected in Flow Launcher and supports German
 and English, including language changes while Flow Launcher is running.
 Other languages fall back to English.
 
-## Planned
+## 📋 Planned
 
 - add support for more languages
 - show device name
