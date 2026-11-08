@@ -3,11 +3,11 @@ Flow.Launcher.Plugin.FlowSystem
 
 A plugin for [Flow Launcher](https://github.com/Flow-Launcher/Flow.Launcher) that provides quick access to Windows system and hardware information.
 
-## ✨️ Features
+## ✨ Features
 
 - CPU name, core count, and thread count
 - Graphics card names
-- Installed RAM capacity, memory type (such as DDR4 or DDR5), and configured speed in MT/s
+- Installed RAM capacity, memory type (such as DDR4 or DDR5), module count, and configured speed in MT/s
 - Physical network adapters with Wi-Fi or Ethernet labels
 - SSDs and HDDs with connection type and capacity (excluding USB drives)
 - Windows version, build number, and system architecture

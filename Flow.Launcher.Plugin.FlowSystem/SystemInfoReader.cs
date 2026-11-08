@@ -185,6 +185,7 @@ namespace Flow.Launcher.Plugin.FlowSystem
                     "SELECT Capacity, SMBIOSMemoryType, ConfiguredClockSpeed FROM Win32_PhysicalMemory");
                 using var modules = searcher.Get();
                 ulong totalBytes = 0;
+                int moduleCount = 0;
                 var types = new SortedSet<string>();
                 var configuredSpeeds = new SortedSet<uint>();
 
@@ -192,6 +193,7 @@ namespace Flow.Launcher.Plugin.FlowSystem
                 {
                     using (module)
                     {
+                        moduleCount++;
                         if (module["Capacity"] is ulong capacity && capacity > 0)
                         {
                             totalBytes += capacity;
@@ -212,16 +214,16 @@ namespace Flow.Launcher.Plugin.FlowSystem
                     }
                 }
 
-                return new MemoryInfo(totalBytes, new List<string>(types),
+                return new MemoryInfo(totalBytes, moduleCount, new List<string>(types),
                     new List<uint>(configuredSpeeds), false);
             }
             catch (ManagementException)
             {
-                return new MemoryInfo(0, System.Array.Empty<string>(), System.Array.Empty<uint>(), true);
+                return new MemoryInfo(0, 0, System.Array.Empty<string>(), System.Array.Empty<uint>(), true);
             }
             catch (System.UnauthorizedAccessException)
             {
-                return new MemoryInfo(0, System.Array.Empty<string>(), System.Array.Empty<uint>(), true);
+                return new MemoryInfo(0, 0, System.Array.Empty<string>(), System.Array.Empty<uint>(), true);
             }
         }
 

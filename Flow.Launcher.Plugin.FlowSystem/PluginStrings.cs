@@ -22,6 +22,8 @@ namespace Flow.Launcher.Plugin.FlowSystem
         public string Threads => GetString("threads");
         public string GraphicsCard => GetString("graphics_card");
         public string InstalledMemory => GetString("installed_memory");
+        public string MemoryModule => GetString("memory_module");
+        public string MemoryModules => GetString("memory_modules");
         public string NetworkAdapter => GetString("network_adapter");
         public string WirelessLan => GetString("wireless_lan");
         public string Ethernet => GetString("ethernet");

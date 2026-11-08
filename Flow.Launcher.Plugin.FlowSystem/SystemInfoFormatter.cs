@@ -13,7 +13,7 @@ namespace Flow.Launcher.Plugin.FlowSystem
                 FormatGraphics(info.Graphics, strings),
                 strings.GraphicsCard,
                 FormatMemory(info.Memory, strings),
-                strings.InstalledMemory,
+                FormatMemoryDescription(info.Memory, strings),
                 FormatNetwork(info.Network, strings),
                 FormatStorage(info.Storage, strings),
                 info.OperatingSystem.Name ?? (info.OperatingSystem.NameQueryFailed
@@ -55,6 +55,17 @@ namespace Flow.Launcher.Plugin.FlowSystem
             }
 
             return names;
+        }
+
+        private static string FormatMemoryDescription(MemoryInfo memory, PluginStrings strings)
+        {
+            if (memory.QueryFailed || memory.ModuleCount <= 0)
+            {
+                return strings.InstalledMemory;
+            }
+
+            return strings.InstalledMemory + " · " + memory.ModuleCount.ToString(strings.Culture)
+                + " " + (memory.ModuleCount == 1 ? strings.MemoryModule : strings.MemoryModules);
         }
 
         private static string FormatMemory(MemoryInfo memory, PluginStrings strings)

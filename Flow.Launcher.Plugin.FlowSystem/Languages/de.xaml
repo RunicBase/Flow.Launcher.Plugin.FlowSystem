@@ -12,6 +12,8 @@
     <system:String x:Key="flowlauncher_plugin_flowsystem_threads">Threads</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_graphics_card">Grafikkarte</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_installed_memory">Installierter Arbeitsspeicher</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_memory_module">Modul</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_memory_modules">Module</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_network_adapter">Netzwerkadapter</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_wireless_lan">WLAN</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_ethernet">Ethernet</system:String>
