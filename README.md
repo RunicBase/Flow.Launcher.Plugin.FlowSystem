@@ -18,8 +18,8 @@ A plugin for [Flow Launcher](https://github.com/Flow-Launcher/Flow.Launcher) tha
 
 ## 🌍 Languages
 
-The plugin follows the language selected in Flow Launcher and supports German
-and English, including language changes while Flow Launcher is running.
+The plugin follows the language selected in Flow Launcher and supports German,
+English, and Dutch, including language changes while Flow Launcher is running.
 Other languages fall back to English.
 
 ## 📋 Planned
