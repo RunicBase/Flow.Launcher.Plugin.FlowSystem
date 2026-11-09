@@ -4,6 +4,9 @@
     xmlns:system="clr-namespace:System;assembly=mscorlib">
 
     <system:String x:Key="flowlauncher_plugin_flowsystem_plugin_description">System information for Flow Launcher</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_reload">Reload system information</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_reload_description">Read hardware and system information again</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_reload_success">System information has been updated.</system:String>
 
     <system:String x:Key="flowlauncher_plugin_flowsystem_processor">Processor</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_core">core</system:String>

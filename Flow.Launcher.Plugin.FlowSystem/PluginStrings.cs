@@ -15,6 +15,9 @@ namespace Flow.Launcher.Plugin.FlowSystem
         public CultureInfo Culture { get; set; }
 
         public string PluginDescription => GetString("plugin_description");
+        public string Reload => GetString("reload");
+        public string ReloadDescription => GetString("reload_description");
+        public string ReloadSuccess => GetString("reload_success");
         public string Processor => GetString("processor");
         public string Core => GetString("core");
         public string Cores => GetString("cores");

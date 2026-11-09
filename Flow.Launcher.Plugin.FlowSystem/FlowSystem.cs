@@ -1,16 +1,20 @@
+using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Threading.Tasks;
 
 namespace Flow.Launcher.Plugin.FlowSystem
 {
     public class FlowSystem : IPlugin, IPluginI18n
     {
+        private IPublicAPI _api;
         private PluginStrings _strings;
         private SystemInfo _systemInfo;
         private SystemInfoText _displayText;
 
         public void Init(PluginInitContext context)
         {
+            _api = context.API;
             _strings = new PluginStrings(context.API, CultureInfo.CurrentUICulture);
             _systemInfo = SystemInfoReader.Read();
             UpdateLocalizedText();
@@ -39,6 +43,29 @@ namespace Flow.Launcher.Plugin.FlowSystem
 
         public List<Result> Query(Query query)
         {
+            string search = query.Search.Trim();
+            if (search.Length > 0 && "reload".StartsWith(search, StringComparison.OrdinalIgnoreCase))
+            {
+                return new List<Result>
+                {
+                    new Result
+                    {
+                        Title = _strings.Reload,
+                        SubTitle = _strings.ReloadDescription,
+                        Glyph = new GlyphInfo("/Resources/#Segoe Fluent Icons", "\uE72C"),
+                        AddSelectedCount = false,
+                        AsyncAction = async _ =>
+                        {
+                            _systemInfo = await Task.Run(SystemInfoReader.Read);
+                            UpdateLocalizedText();
+                            _api.ChangeQuery(query.ActionKeyword == "*" ? string.Empty : query.ActionKeyword, true);
+                            _api.ShowMsg("FlowSystem", _strings.ReloadSuccess, "icon.png");
+                            return false;
+                        }
+                    }
+                };
+            }
+
             SystemInfoText text = _displayText;
             var results = new List<Result>
             {

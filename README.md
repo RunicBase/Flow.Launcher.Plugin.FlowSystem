@@ -16,6 +16,13 @@ A plugin for [Flow Launcher](https://github.com/Flow-Launcher/Flow.Launcher) tha
 
     sys
 
+To refresh the cached hardware and system information, enter:
+
+    sys reload
+
+Press Enter to reload the data. FlowSystem then shows the updated system
+overview.
+
 ## 🌍 Languages
 
 The plugin follows the language selected in Flow Launcher and supports German,
