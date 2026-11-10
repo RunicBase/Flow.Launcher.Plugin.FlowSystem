@@ -1,0 +1,38 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <system:String x:Key="flowlauncher_plugin_flowsystem_plugin_description">Información del sistema para Flow Launcher</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_reload">Recargar información del sistema</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_reload_description">Volver a leer la información del hardware y del sistema</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_reload_success">Se ha actualizado la información del sistema.</system:String>
+
+    <system:String x:Key="flowlauncher_plugin_flowsystem_processor">Procesador</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_core">núcleo</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_cores">núcleos</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_thread">hilo</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_threads">hilos</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_graphics_card">Tarjeta gráfica</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_installed_memory">Memoria instalada</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_memory_module">módulo</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_memory_modules">módulos</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_network_adapter">Adaptador de red</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_wireless_lan">Wi-Fi</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_ethernet">Ethernet</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_network_unknown">Adaptador de red desconocido</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_network_query_failed">Error al consultar el adaptador de red</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_storage_device">Dispositivo de almacenamiento</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_storage_query_failed">Error al consultar el almacenamiento</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_operating_system">Sistema operativo</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_build">Compilación</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_system_architecture">Arquitectura del sistema</system:String>
+
+    <system:String x:Key="flowlauncher_plugin_flowsystem_cpu_unknown">CPU desconocida</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_os_unknown">Sistema operativo desconocido</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_os_query_failed">Error al consultar el sistema operativo</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_gpu_unknown">GPU desconocida</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_gpu_query_failed">Error al consultar la GPU</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_ram_unknown">RAM desconocida</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_ram_query_failed">Error al consultar la RAM</system:String>
+</ResourceDictionary>

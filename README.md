@@ -26,7 +26,7 @@ overview.
 ## 🌍 Languages
 
 The plugin follows the language selected in Flow Launcher and supports German,
-English, and Dutch, including language changes while Flow Launcher is running.
+English, Dutch, and Spanish, including language changes while Flow Launcher is running.
 Other languages fall back to English.
 
 ## 📋 Planned
