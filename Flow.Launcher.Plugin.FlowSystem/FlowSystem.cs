@@ -44,6 +44,27 @@ namespace Flow.Launcher.Plugin.FlowSystem
         public List<Result> Query(Query query)
         {
             string search = query.Search.Trim();
+            if (search.Length > 0 && "copy".StartsWith(search, StringComparison.OrdinalIgnoreCase))
+            {
+                return new List<Result>
+                {
+                    new Result
+                    {
+                        Title = _strings.Copy,
+                        SubTitle = _strings.CopyDescription,
+                        Glyph = new GlyphInfo("/Resources/#Segoe Fluent Icons", "\uE8C8"),
+                        AddSelectedCount = false,
+                        Action = _ =>
+                        {
+                            _api.CopyToClipboard(
+                                SystemInfoFormatter.FormatSummary(_displayText, _strings),
+                                directCopy: false, showDefaultNotification: true);
+                            return true;
+                        }
+                    }
+                };
+            }
+
             if (search.Length > 0 && "reload".StartsWith(search, StringComparison.OrdinalIgnoreCase))
             {
                 return new List<Result>
@@ -146,6 +167,16 @@ namespace Flow.Launcher.Plugin.FlowSystem
                 Glyph = new GlyphInfo(
                     "/Resources/#Segoe Fluent Icons",
                     "\uE770"
+                )
+            });
+
+            results.Add(new Result
+            {
+                Title = text.SecureBootText,
+                SubTitle = text.DeviceSecurityDescription,
+                Glyph = new GlyphInfo(
+                    "/Resources/#Segoe Fluent Icons",
+                    "\uEA18"
                 )
             });
 

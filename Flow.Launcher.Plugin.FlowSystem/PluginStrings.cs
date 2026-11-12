@@ -18,6 +18,8 @@ namespace Flow.Launcher.Plugin.FlowSystem
         public string Reload => GetString("reload");
         public string ReloadDescription => GetString("reload_description");
         public string ReloadSuccess => GetString("reload_success");
+        public string Copy => GetString("copy");
+        public string CopyDescription => GetString("copy_description");
         public string Processor => GetString("processor");
         public string Core => GetString("core");
         public string Cores => GetString("cores");
@@ -37,6 +39,10 @@ namespace Flow.Launcher.Plugin.FlowSystem
         public string OperatingSystem => GetString("operating_system");
         public string Build => GetString("build");
         public string SystemArchitecture => GetString("system_architecture");
+        public string DeviceSecurity => GetString("device_security");
+        public string SecureBootEnabled => GetString("secure_boot_enabled");
+        public string SecureBootDisabled => GetString("secure_boot_disabled");
+        public string SecureBootUnreadable => GetString("secure_boot_unreadable");
         public string OsUnknown => GetString("os_unknown");
         public string OsQueryFailed => GetString("os_query_failed");
         public string CpuUnknown => GetString("cpu_unknown");

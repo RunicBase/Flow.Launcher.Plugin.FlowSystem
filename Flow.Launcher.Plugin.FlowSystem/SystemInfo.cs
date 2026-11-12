@@ -9,7 +9,8 @@ namespace Flow.Launcher.Plugin.FlowSystem
         GraphicsInfo Graphics,
         MemoryInfo Memory,
         NetworkInfo Network,
-        StorageInfo Storage);
+        StorageInfo Storage,
+        bool? SecureBootEnabled);
 
     internal sealed record OperatingSystemInfo(
         string Name,

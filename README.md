@@ -11,10 +11,16 @@ A plugin for [Flow Launcher](https://github.com/Flow-Launcher/Flow.Launcher) tha
 - Physical network adapters with Wi-Fi or Ethernet labels
 - SSDs and HDDs with connection type and capacity (excluding USB drives)
 - Windows version, build number, and system architecture
+- Secure Boot status
+- Copy the complete system overview to the clipboard as localized plain text
 
 ## ⌨️ Usage
 
     sys
+
+The device security entry shows the Secure Boot state reported by Windows in the
+registry without requesting administrator privileges. If the value is missing or
+cannot be read, the status is shown as unavailable rather than disabled.
 
 To refresh the cached hardware and system information, enter:
 
@@ -22,6 +28,14 @@ To refresh the cached hardware and system information, enter:
 
 Press Enter to reload the data. FlowSystem then shows the updated system
 overview.
+
+To copy the cached hardware and system information, enter:
+
+    sys copy
+
+Press Enter to copy the overview to the clipboard. Each component gets its own
+line, including separate lines for multiple graphics cards, network adapters, and
+drives. Labels follow the language selected in Flow Launcher.
 
 ## 🌍 Languages
 

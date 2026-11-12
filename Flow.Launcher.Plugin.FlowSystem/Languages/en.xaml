@@ -8,6 +8,9 @@
     <system:String x:Key="flowlauncher_plugin_flowsystem_reload_description">Read hardware and system information again</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_reload_success">System information has been updated.</system:String>
 
+    <system:String x:Key="flowlauncher_plugin_flowsystem_copy">Copy system overview</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_copy_description">Copy all hardware and system information as plain text</system:String>
+
     <system:String x:Key="flowlauncher_plugin_flowsystem_processor">Processor</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_core">core</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_cores">cores</system:String>
@@ -27,6 +30,11 @@
     <system:String x:Key="flowlauncher_plugin_flowsystem_operating_system">Operating System</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_build">Build</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_system_architecture">System architecture</system:String>
+
+    <system:String x:Key="flowlauncher_plugin_flowsystem_device_security">Device security</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_secure_boot_enabled">Secure Boot enabled</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_secure_boot_disabled">Secure Boot disabled</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_secure_boot_unreadable">Secure Boot status unavailable</system:String>
 
     <system:String x:Key="flowlauncher_plugin_flowsystem_cpu_unknown">CPU unknown</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_os_unknown">Operating system unknown</system:String>

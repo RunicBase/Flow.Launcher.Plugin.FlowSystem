@@ -12,7 +12,34 @@ namespace Flow.Launcher.Plugin.FlowSystem
         public static SystemInfo Read()
         {
             return new SystemInfo(ReadOperatingSystem(), ReadProcessor(), ReadGraphics(),
-                ReadMemory(), ReadNetwork(), ReadStorage());
+                ReadMemory(), ReadNetwork(), ReadStorage(), ReadSecureBoot());
+        }
+
+        private static bool? ReadSecureBoot()
+        {
+            try
+            {
+                using var key = Registry.LocalMachine.OpenSubKey(
+                    @"SYSTEM\CurrentControlSet\Control\SecureBoot\State");
+                return key?.GetValue("UEFISecureBootEnabled") switch
+                {
+                    1 => true,
+                    0 => false,
+                    _ => null
+                };
+            }
+            catch (System.Security.SecurityException)
+            {
+                return null;
+            }
+            catch (System.UnauthorizedAccessException)
+            {
+                return null;
+            }
+            catch (System.IO.IOException)
+            {
+                return null;
+            }
         }
 
         private static OperatingSystemInfo ReadOperatingSystem()

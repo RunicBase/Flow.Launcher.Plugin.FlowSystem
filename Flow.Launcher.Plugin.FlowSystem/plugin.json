@@ -6,7 +6,7 @@
     "Author": "rxbn_kng",
     "Version": "1.0.0",
     "Language": "csharp",
-    "Website": "https://github.com/rxbn_kng/Flow.Launcher.Plugin.FlowSystem",
+    "Website": "https://github.com/RunicBase/Flow.Launcher.Plugin.FlowSystem",
     "IcoPath": "icon.png",
     "ExecuteFileName": "Flow.Launcher.Plugin.FlowSystem.dll"
 }

@@ -8,6 +8,9 @@
     <system:String x:Key="flowlauncher_plugin_flowsystem_reload_description">Hardware- en systeeminformatie opnieuw uitlezen</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_reload_success">Systeeminformatie is bijgewerkt.</system:String>
 
+    <system:String x:Key="flowlauncher_plugin_flowsystem_copy">Systeemoverzicht kopiëren</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_copy_description">Alle hardware- en systeeminformatie als platte tekst kopiëren</system:String>
+
     <system:String x:Key="flowlauncher_plugin_flowsystem_processor">Processor</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_core">kern</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_cores">kernen</system:String>
@@ -27,6 +30,11 @@
     <system:String x:Key="flowlauncher_plugin_flowsystem_operating_system">Besturingssysteem</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_build">Build</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_system_architecture">Systeemarchitectuur</system:String>
+
+    <system:String x:Key="flowlauncher_plugin_flowsystem_device_security">Apparaatbeveiliging</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_secure_boot_enabled">Secure Boot ingeschakeld</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_secure_boot_disabled">Secure Boot uitgeschakeld</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_secure_boot_unreadable">Secure Boot-status niet beschikbaar</system:String>
 
     <system:String x:Key="flowlauncher_plugin_flowsystem_cpu_unknown">CPU onbekend</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_os_unknown">Besturingssysteem onbekend</system:String>

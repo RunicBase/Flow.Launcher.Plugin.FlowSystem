@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Net.NetworkInformation;
 
@@ -20,7 +21,52 @@ namespace Flow.Launcher.Plugin.FlowSystem
                     ? strings.OsQueryFailed : strings.OsUnknown),
                 FormatOperatingSystem(info.OperatingSystem, strings),
                 info.OperatingSystem.Architecture,
-                strings.SystemArchitecture);
+                strings.SystemArchitecture,
+                info.SecureBootEnabled switch
+                {
+                    true => strings.SecureBootEnabled,
+                    false => strings.SecureBootDisabled,
+                    null => strings.SecureBootUnreadable
+                },
+                strings.DeviceSecurity);
+        }
+
+        public static string FormatSummary(SystemInfoText text, PluginStrings strings)
+        {
+            var lines = new List<string>
+            {
+                FormatSummaryLine(strings.Processor, text.CpuName, text.CpuDescription)
+            };
+
+            foreach (string gpuName in text.GpuNames)
+            {
+                lines.Add(text.GpuDescription + ": " + gpuName);
+            }
+
+            lines.Add(FormatSummaryLine(strings.InstalledMemory, text.RamText, text.RamDescription));
+
+            foreach (NetworkAdapterText adapter in text.NetworkAdapters)
+            {
+                lines.Add(FormatSummaryLine(strings.NetworkAdapter, adapter.Name, adapter.Description));
+            }
+
+            foreach (DiskText disk in text.Disks)
+            {
+                lines.Add(FormatSummaryLine(strings.StorageDevice, disk.Name, disk.Description));
+            }
+
+            lines.Add(FormatSummaryLine(strings.OperatingSystem, text.OsName, text.OsDescription));
+            lines.Add(text.ArchitectureDescription + ": " + text.Architecture);
+            lines.Add(text.DeviceSecurityDescription + ": " + text.SecureBootText);
+            return string.Join(Environment.NewLine, lines);
+        }
+
+        private static string FormatSummaryLine(string label, string value, string description)
+        {
+            string details = description.StartsWith(label, StringComparison.Ordinal)
+                ? description.Substring(label.Length)
+                : " · " + description;
+            return label + ": " + value + details;
         }
 
         private static string FormatProcessor(ProcessorInfo processor, PluginStrings strings)
@@ -222,7 +268,9 @@ namespace Flow.Launcher.Plugin.FlowSystem
         string OsName,
         string OsDescription,
         string Architecture,
-        string ArchitectureDescription);
+        string ArchitectureDescription,
+        string SecureBootText,
+        string DeviceSecurityDescription);
 
     internal sealed record DiskText(string Name, string Description);
 

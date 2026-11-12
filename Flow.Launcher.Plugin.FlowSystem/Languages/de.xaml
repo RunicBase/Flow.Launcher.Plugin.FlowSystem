@@ -8,6 +8,9 @@
     <system:String x:Key="flowlauncher_plugin_flowsystem_reload_description">Hardware- und Systeminformationen erneut einlesen</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_reload_success">Systeminformationen wurden aktualisiert.</system:String>
 
+    <system:String x:Key="flowlauncher_plugin_flowsystem_copy">Systemübersicht kopieren</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_copy_description">Alle Hardware- und Systeminformationen als Klartext kopieren</system:String>
+
     <system:String x:Key="flowlauncher_plugin_flowsystem_processor">Prozessor</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_core">Kern</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_cores">Kerne</system:String>
@@ -27,6 +30,11 @@
     <system:String x:Key="flowlauncher_plugin_flowsystem_operating_system">Betriebssystem</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_build">Build</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_system_architecture">Systemarchitektur</system:String>
+
+    <system:String x:Key="flowlauncher_plugin_flowsystem_device_security">Gerätesicherheit</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_secure_boot_enabled">Secure Boot aktiviert</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_secure_boot_disabled">Secure Boot deaktiviert</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_secure_boot_unreadable">Secure Boot nicht auslesbar</system:String>
 
     <system:String x:Key="flowlauncher_plugin_flowsystem_cpu_unknown">CPU unbekannt</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_os_unknown">Betriebssystem unbekannt</system:String>

@@ -5,12 +5,12 @@
     <AssemblyName>Flow.Launcher.Plugin.FlowSystem</AssemblyName>
     <PackageId>Flow.Launcher.Plugin.FlowSystem</PackageId>
     <Authors>rxbn_kng</Authors>
-    <PackageProjectUrl>https://github.com/rxbn_kng/Flow.Launcher.Plugin.FlowSystem</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/rxbn_kng/Flow.Launcher.Plugin.FlowSystem</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/RunicBase/Flow.Launcher.Plugin.FlowSystem</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/RunicBase/Flow.Launcher.Plugin.FlowSystem</RepositoryUrl>
     <PackageTags>flow-launcher flow-plugin</PackageTags>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">

@@ -8,6 +8,9 @@
     <system:String x:Key="flowlauncher_plugin_flowsystem_reload_description">Volver a leer la información del hardware y del sistema</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_reload_success">Se ha actualizado la información del sistema.</system:String>
 
+    <system:String x:Key="flowlauncher_plugin_flowsystem_copy">Copiar resumen del sistema</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_copy_description">Copiar toda la información del hardware y del sistema como texto sin formato</system:String>
+
     <system:String x:Key="flowlauncher_plugin_flowsystem_processor">Procesador</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_core">núcleo</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_cores">núcleos</system:String>
@@ -27,6 +30,11 @@
     <system:String x:Key="flowlauncher_plugin_flowsystem_operating_system">Sistema operativo</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_build">Compilación</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_system_architecture">Arquitectura del sistema</system:String>
+
+    <system:String x:Key="flowlauncher_plugin_flowsystem_device_security">Seguridad del dispositivo</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_secure_boot_enabled">Arranque seguro activado</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_secure_boot_disabled">Arranque seguro desactivado</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_secure_boot_unreadable">Estado del arranque seguro no disponible</system:String>
 
     <system:String x:Key="flowlauncher_plugin_flowsystem_cpu_unknown">CPU desconocida</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_os_unknown">Sistema operativo desconocido</system:String>
