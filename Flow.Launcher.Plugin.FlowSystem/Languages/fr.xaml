@@ -1,0 +1,46 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <system:String x:Key="flowlauncher_plugin_flowsystem_plugin_description">Informations système pour Flow Launcher</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_reload">Actualiser les informations système</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_reload_description">Relire les informations sur le matériel et le système</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_reload_success">Les informations système ont été mises à jour.</system:String>
+
+    <system:String x:Key="flowlauncher_plugin_flowsystem_copy">Copier le résumé du système</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_copy_description">Copier toutes les informations sur le matériel et le système en texte brut</system:String>
+
+    <system:String x:Key="flowlauncher_plugin_flowsystem_processor">Processeur</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_core">cœur</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_cores">cœurs</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_thread">processeur logique</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_threads">processeurs logiques</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_graphics_card">Carte graphique</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_installed_memory">Mémoire vive installée</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_memory_module">barrette</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_memory_modules">barrettes</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_network_adapter">Carte réseau</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_wireless_lan">Wi-Fi</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_ethernet">Ethernet</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_network_unknown">Carte réseau inconnue</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_network_query_failed">Impossible de lire les informations sur la carte réseau</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_storage_device">Périphérique de stockage</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_storage_query_failed">Impossible de lire les informations sur le stockage</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_operating_system">Système d’exploitation</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_build">Numéro de build</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_system_architecture">Architecture du système</system:String>
+
+    <system:String x:Key="flowlauncher_plugin_flowsystem_device_security">Sécurité de l’appareil</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_secure_boot_enabled">Démarrage sécurisé activé</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_secure_boot_disabled">Démarrage sécurisé désactivé</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_secure_boot_unreadable">État du démarrage sécurisé indisponible</system:String>
+
+    <system:String x:Key="flowlauncher_plugin_flowsystem_cpu_unknown">Processeur inconnu</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_os_unknown">Système d’exploitation inconnu</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_os_query_failed">Impossible de lire les informations sur le système d’exploitation</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_gpu_unknown">Carte graphique inconnue</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_gpu_query_failed">Impossible de lire les informations sur la carte graphique</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_ram_unknown">Quantité de mémoire vive inconnue</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_ram_query_failed">Impossible de lire les informations sur la mémoire vive</system:String>
+</ResourceDictionary>
