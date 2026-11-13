@@ -49,6 +49,7 @@ Other languages fall back to English.
 - add support for more languages
 - show device name
 - add battery information for supported devices
+- display GPU memory information (dedicated and shared VRAM)
 
 ## 📄 License
 
