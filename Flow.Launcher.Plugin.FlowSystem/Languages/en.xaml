@@ -35,6 +35,8 @@
     <system:String x:Key="flowlauncher_plugin_flowsystem_secure_boot_enabled">Secure Boot enabled</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_secure_boot_disabled">Secure Boot disabled</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_secure_boot_unreadable">Secure Boot status unavailable</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_tpm_not_detected">No TPM detected</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_tpm_version_unavailable">TPM version unavailable</system:String>
 
     <system:String x:Key="flowlauncher_plugin_flowsystem_cpu_unknown">CPU unknown</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_os_unknown">Operating system unknown</system:String>

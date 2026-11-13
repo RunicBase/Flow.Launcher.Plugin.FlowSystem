@@ -43,6 +43,8 @@ namespace Flow.Launcher.Plugin.FlowSystem
         public string SecureBootEnabled => GetString("secure_boot_enabled");
         public string SecureBootDisabled => GetString("secure_boot_disabled");
         public string SecureBootUnreadable => GetString("secure_boot_unreadable");
+        public string TpmNotDetected => GetString("tpm_not_detected");
+        public string TpmVersionUnavailable => GetString("tpm_version_unavailable");
         public string OsUnknown => GetString("os_unknown");
         public string OsQueryFailed => GetString("os_query_failed");
         public string CpuUnknown => GetString("cpu_unknown");

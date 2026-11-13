@@ -172,7 +172,7 @@ namespace Flow.Launcher.Plugin.FlowSystem
 
             results.Add(new Result
             {
-                Title = text.SecureBootText,
+                Title = text.DeviceSecurityText,
                 SubTitle = text.DeviceSecurityDescription,
                 Glyph = new GlyphInfo(
                     "/Resources/#Segoe Fluent Icons",

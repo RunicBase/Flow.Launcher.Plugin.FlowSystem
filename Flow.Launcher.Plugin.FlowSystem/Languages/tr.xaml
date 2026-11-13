@@ -35,6 +35,8 @@
     <system:String x:Key="flowlauncher_plugin_flowsystem_secure_boot_enabled">Güvenli Önyükleme etkin</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_secure_boot_disabled">Güvenli Önyükleme devre dışı</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_secure_boot_unreadable">Güvenli Önyükleme durumu kullanılamıyor</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_tpm_not_detected">TPM algılanmadı</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_tpm_version_unavailable">TPM sürümü kullanılamıyor</system:String>
 
     <system:String x:Key="flowlauncher_plugin_flowsystem_cpu_unknown">CPU bilinmiyor</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_os_unknown">İşletim sistemi bilinmiyor</system:String>

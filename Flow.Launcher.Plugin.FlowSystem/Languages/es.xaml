@@ -35,6 +35,8 @@
     <system:String x:Key="flowlauncher_plugin_flowsystem_secure_boot_enabled">Arranque seguro activado</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_secure_boot_disabled">Arranque seguro desactivado</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_secure_boot_unreadable">Estado del arranque seguro no disponible</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_tpm_not_detected">No se detectó ningún TPM</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_tpm_version_unavailable">Versión de TPM no disponible</system:String>
 
     <system:String x:Key="flowlauncher_plugin_flowsystem_cpu_unknown">CPU desconocida</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_os_unknown">Sistema operativo desconocido</system:String>

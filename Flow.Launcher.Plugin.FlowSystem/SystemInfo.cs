@@ -10,7 +10,16 @@ namespace Flow.Launcher.Plugin.FlowSystem
         MemoryInfo Memory,
         NetworkInfo Network,
         StorageInfo Storage,
-        bool? SecureBootEnabled);
+        bool? SecureBootEnabled,
+        TpmStatus Tpm);
+
+    internal enum TpmStatus
+    {
+        Unavailable,
+        Version12,
+        Version20,
+        NotDetected
+    }
 
     internal sealed record OperatingSystemInfo(
         string Name,

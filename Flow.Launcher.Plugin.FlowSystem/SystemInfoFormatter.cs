@@ -22,13 +22,28 @@ namespace Flow.Launcher.Plugin.FlowSystem
                 FormatOperatingSystem(info.OperatingSystem, strings),
                 info.OperatingSystem.Architecture,
                 strings.SystemArchitecture,
-                info.SecureBootEnabled switch
-                {
-                    true => strings.SecureBootEnabled,
-                    false => strings.SecureBootDisabled,
-                    null => strings.SecureBootUnreadable
-                },
+                FormatDeviceSecurity(info, strings),
                 strings.DeviceSecurity);
+        }
+
+        private static string FormatDeviceSecurity(SystemInfo info, PluginStrings strings)
+        {
+            string secureBoot = info.SecureBootEnabled switch
+            {
+                true => strings.SecureBootEnabled,
+                false => strings.SecureBootDisabled,
+                null => strings.SecureBootUnreadable
+            };
+
+            string tpm = info.Tpm switch
+            {
+                TpmStatus.Version12 => "TPM 1.2",
+                TpmStatus.Version20 => "TPM 2.0",
+                TpmStatus.NotDetected => strings.TpmNotDetected,
+                _ => strings.TpmVersionUnavailable
+            };
+
+            return secureBoot + " · " + tpm;
         }
 
         public static string FormatSummary(SystemInfoText text, PluginStrings strings)
@@ -57,7 +72,7 @@ namespace Flow.Launcher.Plugin.FlowSystem
 
             lines.Add(FormatSummaryLine(strings.OperatingSystem, text.OsName, text.OsDescription));
             lines.Add(text.ArchitectureDescription + ": " + text.Architecture);
-            lines.Add(text.DeviceSecurityDescription + ": " + text.SecureBootText);
+            lines.Add(text.DeviceSecurityDescription + ": " + text.DeviceSecurityText);
             return string.Join(Environment.NewLine, lines);
         }
 
@@ -269,7 +284,7 @@ namespace Flow.Launcher.Plugin.FlowSystem
         string OsDescription,
         string Architecture,
         string ArchitectureDescription,
-        string SecureBootText,
+        string DeviceSecurityText,
         string DeviceSecurityDescription);
 
     internal sealed record DiskText(string Name, string Description);

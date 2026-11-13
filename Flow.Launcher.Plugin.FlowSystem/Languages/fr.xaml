@@ -35,6 +35,8 @@
     <system:String x:Key="flowlauncher_plugin_flowsystem_secure_boot_enabled">Démarrage sécurisé activé</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_secure_boot_disabled">Démarrage sécurisé désactivé</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_secure_boot_unreadable">État du démarrage sécurisé indisponible</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_tpm_not_detected">Aucun TPM détecté</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_tpm_version_unavailable">Version du TPM indisponible</system:String>
 
     <system:String x:Key="flowlauncher_plugin_flowsystem_cpu_unknown">Processeur inconnu</system:String>
     <system:String x:Key="flowlauncher_plugin_flowsystem_os_unknown">Système d’exploitation inconnu</system:String>

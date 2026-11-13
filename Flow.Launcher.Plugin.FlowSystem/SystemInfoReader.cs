@@ -9,10 +9,50 @@ namespace Flow.Launcher.Plugin.FlowSystem
 {
     internal static class SystemInfoReader
     {
+        private const uint TbsTpmNotFound = 0x8028400F;
+        private const uint TpmVersion12 = 1;
+        private const uint TpmVersion20 = 2;
+
         public static SystemInfo Read()
         {
             return new SystemInfo(ReadOperatingSystem(), ReadProcessor(), ReadGraphics(),
-                ReadMemory(), ReadNetwork(), ReadStorage(), ReadSecureBoot());
+                ReadMemory(), ReadNetwork(), ReadStorage(), ReadSecureBoot(), ReadTpm());
+        }
+
+        private static TpmStatus ReadTpm()
+        {
+            try
+            {
+                uint result = Tbsi_GetDeviceInfo((uint)Marshal.SizeOf<TpmDeviceInfo>(), out TpmDeviceInfo info);
+                return (result, info.TpmVersion) switch
+                {
+                    (0, TpmVersion12) => TpmStatus.Version12,
+                    (0, TpmVersion20) => TpmStatus.Version20,
+                    (TbsTpmNotFound, _) => TpmStatus.NotDetected,
+                    _ => TpmStatus.Unavailable
+                };
+            }
+            catch (System.DllNotFoundException)
+            {
+                return TpmStatus.Unavailable;
+            }
+            catch (System.EntryPointNotFoundException)
+            {
+                return TpmStatus.Unavailable;
+            }
+        }
+
+        [DllImport("tbs.dll", ExactSpelling = true)]
+        [DefaultDllImportSearchPaths(DllImportSearchPath.System32)]
+        private static extern uint Tbsi_GetDeviceInfo(uint size, out TpmDeviceInfo info);
+
+        [StructLayout(LayoutKind.Sequential)]
+        private struct TpmDeviceInfo
+        {
+            public uint StructVersion;
+            public uint TpmVersion;
+            public uint TpmInterfaceType;
+            public uint TpmImplementationRevision;
         }
 
         private static bool? ReadSecureBoot()

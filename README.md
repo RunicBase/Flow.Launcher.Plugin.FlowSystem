@@ -11,7 +11,7 @@ A plugin for [Flow Launcher](https://github.com/Flow-Launcher/Flow.Launcher) tha
 - Physical network adapters with Wi-Fi or Ethernet labels
 - SSDs and HDDs with connection type and capacity (excluding USB drives)
 - Windows version, build number, and system architecture
-- Secure Boot status
+- Secure Boot status and TPM specification version
 - Copy the complete system overview to the clipboard as localized plain text
 
 ## ⌨️ Usage
