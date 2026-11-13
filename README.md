@@ -39,7 +39,11 @@ drives. Labels follow the language selected in Flow Launcher.
 
 ## 🌍 Languages
 
-The plugin follows the language selected in Flow Launcher and supports Brazilian Portuguese, Dutch, English, French, German, Italian, Simplified Chinese, Spanish, and Turkish, including language changes while Flow Launcher is running. Other languages fall back to English.
+The plugin automatically follows the language selected in Flow Launcher, including changes made while the application is running.
+
+**Supported languages:** Brazilian Portuguese, Dutch, English, French, German, Italian, Simplified Chinese, Spanish, and Turkish
+
+Unsupported languages fall back to English.
 
 ## 📋 Planned
 
