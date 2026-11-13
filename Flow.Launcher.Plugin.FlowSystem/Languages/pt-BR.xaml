@@ -1,0 +1,48 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <system:String x:Key="flowlauncher_plugin_flowsystem_plugin_description">Informações do sistema para o Flow Launcher</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_reload">Atualizar informações do sistema</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_reload_description">Consultar novamente as informações de hardware e do sistema</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_reload_success">As informações do sistema foram atualizadas.</system:String>
+
+    <system:String x:Key="flowlauncher_plugin_flowsystem_copy">Copiar resumo do sistema</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_copy_description">Copiar todas as informações de hardware e do sistema como texto simples</system:String>
+
+    <system:String x:Key="flowlauncher_plugin_flowsystem_processor">Processador</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_core">núcleo</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_cores">núcleos</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_thread">thread</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_threads">threads</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_graphics_card">Placa de vídeo</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_installed_memory">Memória instalada</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_memory_module">módulo</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_memory_modules">módulos</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_network_adapter">Adaptador de rede</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_wireless_lan">Wi-Fi</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_ethernet">Ethernet</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_network_unknown">Adaptador de rede desconhecido</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_network_query_failed">Falha ao consultar o adaptador de rede</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_storage_device">Dispositivo de armazenamento</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_storage_query_failed">Falha ao consultar o armazenamento</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_operating_system">Sistema operacional</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_build">Compilação</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_system_architecture">Arquitetura do sistema</system:String>
+
+    <system:String x:Key="flowlauncher_plugin_flowsystem_device_security">Segurança do dispositivo</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_secure_boot_enabled">Inicialização Segura ativada</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_secure_boot_disabled">Inicialização Segura desativada</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_secure_boot_unreadable">Status da Inicialização Segura indisponível</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_tpm_not_detected">Nenhum TPM detectado</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_tpm_version_unavailable">Versão do TPM indisponível</system:String>
+
+    <system:String x:Key="flowlauncher_plugin_flowsystem_cpu_unknown">CPU desconhecida</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_os_unknown">Sistema operacional desconhecido</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_os_query_failed">Falha ao consultar o sistema operacional</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_gpu_unknown">GPU desconhecida</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_gpu_query_failed">Falha ao consultar a GPU</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_ram_unknown">RAM desconhecida</system:String>
+    <system:String x:Key="flowlauncher_plugin_flowsystem_ram_query_failed">Falha ao consultar a RAM</system:String>
+</ResourceDictionary>
