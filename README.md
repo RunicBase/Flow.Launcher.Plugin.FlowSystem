@@ -1,4 +1,4 @@
-Flow.Launcher.Plugin.FlowSystem
+FlowSystem
 ==================
 
 A plugin for [Flow Launcher](https://github.com/Flow-Launcher/Flow.Launcher) that provides quick access to Windows system and hardware information.
